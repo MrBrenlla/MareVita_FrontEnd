@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/vector_with_inner_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Vector principal -->
+    <item>
+        <vector
+            android:width="100dp"
+            android:height="60dp"
+            android:viewportWidth="200"
+            android:viewportHeight="90">
+            <path
+                android:fillColor="@color/shadow_grey"
+                android:pathData="M0,15 L200,0 L200,90 L0,90 Z"/>
+        </vector>
+    </item>
+
+    <!-- Vector principal -->
+    <item android:left="0.5dp" android:top="0.5dp" android:right="0.5dp" android:bottom="0.5dp">
+        <vector
+            android:width="100dp"
+            android:height="60dp"
+            android:viewportWidth="200"
+            android:viewportHeight="90">
+            <path
+                android:fillColor="@color/white"
+                android:pathData="M0,15 L200,0 L200,90 L0,90 Z"/>
+        </vector>
+    </item>
+
+    <!-- Sombra interna simulada: un vector oscuro, ligeramente escalado -->
+
+
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <vector
+            android:width="100dp"
+            android:height="60dp"
+            android:viewportWidth="200"
+            android:viewportHeight="90">
+            <path
+                android:fillColor="@color/light_grey"
+                android:pathData="M0,15 L200,0 L200,90 L0,90 Z"/>
+        </vector>
+    </item>
+
+
+
+</layer-list>

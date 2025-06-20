@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/round_with_inner_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Círculo principal enriba -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/shadow_grey" />
+        </shape>
+    </item>
+
+    <!-- Sombra interna (simulada como capa inferior máis escura) -->
+    <item android:left="1.5dp" android:top="1.5dp" android:right="1.5dp" android:bottom="1.5dp">
+        <shape android:shape="oval">
+            <gradient
+                android:centerColor="@color/blue"
+                android:endColor="@color/white"
+                android:startColor="@color/blue"
+                android:gradientRadius="70%"
+                android:type="radial"
+                android:useLevel="false" />
+        </shape>
+    </item>
+
+</layer-list>

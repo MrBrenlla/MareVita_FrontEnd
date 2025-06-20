@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="gal.marevita.FeedFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/home"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/leftmenubuttonbackground"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/historic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.2"
+        android:src="@drawable/home"
+        android:scaleType="centerInside"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="20dp"
+        android:checkable="true"
+        app:toggleCheckedStateOnClick="false" />
+
+
+    <ImageButton
+        android:id="@+id/historic"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="26.5dp"
+        android:background="@drawable/leftmenubuttonbackground"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/maps"
+        app:layout_constraintStart_toEndOf="@+id/home"
+        app:layout_constraintTop_toTopOf="@+id/home"
+        android:src="@drawable/captures"
+        android:scaleType="centerInside"
+        android:paddingEnd="35dp"
+        android:paddingBottom="30dp"
+        android:paddingTop="15dp"
+        android:checkable="true"
+        app:toggleCheckedStateOnClick="false"/>
+
+    <ImageButton
+        android:id="@+id/maps"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="26.5dp"
+        android:background="@drawable/rightmenubuttonbackground"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        app:layout_constraintStart_toEndOf="@+id/historic"
+        app:layout_constraintTop_toTopOf="@+id/profile"
+        android:src="@drawable/map"
+        android:scaleType="centerInside"
+        android:paddingStart="35dp"
+        android:paddingBottom="30dp"
+        android:paddingTop="15dp"/>
+
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/rightmenubuttonbackground"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/maps"
+        app:layout_constraintWidth_percent="0.2"
+        android:src="@drawable/user"
+        android:scaleType="centerInside"
+        android:paddingHorizontal="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:checkable="true"
+        app:toggleCheckedStateOnClick="false"/>
+
+    <ImageButton
+        android:id="@+id/capture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/roundbuttonbackground"
+        android:textSize="20sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/logo"
+        android:scaleType="centerInside"
+        android:padding="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/anzuelo"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="1.2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/anzol_largo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

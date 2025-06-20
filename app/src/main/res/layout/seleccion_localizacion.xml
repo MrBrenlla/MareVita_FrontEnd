@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <ImageButton
+        android:id="@+id/btnUbicacionActual"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:src="@drawable/location"
+        android:scaleType="centerInside"
+        android:background="@drawable/buttonbackground"
+        app:backgroundTint="@null"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="4dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbackground"
+        app:backgroundTint="@null"
+        android:text="Confirmar ubicación"
+        android:onClick="onConfirmLocation"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="30dp"/>
+</FrameLayout>

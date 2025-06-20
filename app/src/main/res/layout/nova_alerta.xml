@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Nova alerta"
+                android:textSize="34sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Nome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/locationButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/location"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Localización">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/baitsButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baits"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/baitsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Cebos">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/baitsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/fishButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/fish"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fishLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Peixes">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fishText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/relatedCaptureButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/captures"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/relatedCaptureLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Captura relacionada">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/relatedCaptureText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Condicións:"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:id="@+id/conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="45dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/buttonbackground"
+                android:layout_gravity="center_horizontal"
+                android:text="Gardar"
+                android:textSize="16dp"
+                app:backgroundTint="@null"
+                android:paddingHorizontal="25dp"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

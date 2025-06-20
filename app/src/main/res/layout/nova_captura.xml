@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Nova captura"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/privacidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Privacidade"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/publicButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:icon="@drawable/public_capture"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:backgroundTint="@null"
+                    android:text="Público"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:checkable="true"
+                    app:toggleCheckedStateOnClick="false"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/friendsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:icon="@drawable/social"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:backgroundTint="@null"
+                    android:text="Amigos"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:checkable="true"
+                    app:toggleCheckedStateOnClick="false"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/privateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    app:icon="@drawable/private_capture"
+                    app:iconSize="20dp"
+                    app:iconGravity="textStart"
+                    app:backgroundTint="@null"
+                    android:text="Privado"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:checkable="true"
+                    app:toggleCheckedStateOnClick="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/locationButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/location"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/locationLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Localización">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/locationText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/baitsButton"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/buttonbackground"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="4dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/baits"
+                    app:backgroundTint="@null" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/baitsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:hint="Cebos">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/baitsText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Agora?" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dateLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:hint="Data"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/timeLayout"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/timeLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Hora"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fishButton"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonbackground"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="30dp"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/fish"
+                    app:iconGravity="textEnd"
+                    app:iconSize="30dp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/fishesScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/shadow_grey20"
+                    android:backgroundTint="@null">
+
+                    <LinearLayout
+                        android:id="@+id/fishes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp">
+
+
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/comentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="20dp"
+                android:hint="Comentario (Opcional)">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/comentText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/photoButton"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/buttonbackground"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="30dp"
+                    app:backgroundTint="@null"
+                    app:icon="@drawable/camera"
+                    app:iconGravity="textEnd"
+                    app:iconSize="30dp" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/photosScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/shadow_grey20">
+
+                    <GridLayout
+                        android:id="@+id/photos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:layout_margin="5dp">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="1"
+                            android:background="@android:color/transparent" />
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_columnWeight="1"
+                            android:background="@android:color/transparent" />
+
+
+
+                    </GridLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginHorizontal="45dp"
+                android:textColor="@color/red"
+                android:textSize="12sp"/>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/buttonbackground"
+                android:layout_gravity="center_horizontal"
+                android:text="Gardar"
+                android:textSize="16dp"
+                app:backgroundTint="@null"
+                android:paddingHorizontal="25dp"
+                />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/anzuelo"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="1.2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/anzol_largo"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

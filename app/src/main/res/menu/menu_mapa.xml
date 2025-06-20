@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/latestCaptures"
+        android:title="Últimas Capturas"
+        android:icon="@drawable/fish"/>
+
+    <group android:id="@+id/group_climatology" android:checkableBehavior="none">
+        <item
+            android:id="@+id/weather"
+            android:title="Climatoloxía"
+            android:enabled="false"
+            android:icon="@drawable/weather"/>
+
+        <item android:id="@+id/temp" android:title="Temperatura"/>
+        <item android:id="@+id/humidity" android:title="Humidade"/>
+        <item android:id="@+id/wind" android:title="Vento"/>
+        <item android:id="@+id/pressure" android:title="Presión atmosférica"/>
+        <item android:id="@+id/rain" android:title="Choiva"/>
+        <item android:id="@+id/clouds" android:title="Nubes"/>
+        <item android:id="@+id/uvindex" android:title="UV"/>
+        <item android:id="@+id/waves" android:title="Ondas"/>
+        <item android:id="@+id/sst" android:title="Temperatura mar"/>
+        <item android:id="@+id/currents" android:title="Correntes"/>
+    </group>
+</menu>

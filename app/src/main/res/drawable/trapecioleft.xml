@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="3dp"
+    android:height="8dp"
+    android:viewportWidth="30"
+    android:viewportHeight="85">
+
+    <!-- Sombra invertida horizontalmente -->
+    <path
+        android:fillColor="#55000000"
+        android:pathData="M30,1 L0,1 L4,81 L30,81 Z" />
+
+    <!-- Trapecio principal invertido horizontalmente -->
+    <path
+        android:fillColor="?attr/colorSecondary"
+        android:pathData="M30,0 L1,0 L5,80 L30,80 Z" />
+</vector>

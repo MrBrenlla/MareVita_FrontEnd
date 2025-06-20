@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Filtrar por"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5">
+
+        <AutoCompleteTextView
+            android:id="@+id/dropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/filter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/filterArrow"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/filterArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="25sp"
+        android:text=">"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="@+id/textInputLayout"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+        app:layout_constraintTop_toTopOf="@+id/textInputLayout"
+        android:visibility="gone"/>
+
+    <GridLayout
+        android:id="@+id/capturesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        android:layout_marginTop="10dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_columnWeight="1"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_columnWeight="1"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="10dp"
+            android:layout_columnWeight="1"/>
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
