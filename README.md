@@ -53,9 +53,7 @@ Antes de lanzar a aplicación, debes configurar a URL base do teu backend:
 
 >*Se non se modificou o docker compose o porto debería ser o 8080*
 
----
-
-## 4. Autor e Data
+----------
 
 **Autor:** Túa Nome  
 **Proxecto:** MareVita  
