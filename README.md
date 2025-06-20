@@ -55,6 +55,6 @@ Antes de lanzar a aplicación, debes configurar a URL base do teu backend:
 
 ----------
 
-**Autor:** Brais García Brenlla
+**Autor:** Brais García Brenlla  
 **Proxecto:** MareVita  
 **Data:** Xuño de 2025
