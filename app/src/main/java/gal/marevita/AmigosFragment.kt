@@ -1,5 +1,6 @@
 package gal.marevita
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +13,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import gal.marevita.databinding.AmigosBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class AmigosFragment : Fragment() {
 
@@ -44,7 +48,10 @@ class AmigosFragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        binding.friends.removeAllViews()
+        lifecycleScope.launch {
+            delay(200)
+            binding.friends.removeAllViews()
+        }
     }
 
     fun refreshList() {
@@ -86,6 +93,18 @@ class AmigosFragment : Fragment() {
                 }
             }
         }
+
+        vista.findViewById<TextView>(R.id.userName).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", friend)
+            startActivity(intent)
+        }
+        vista.findViewById<ImageView>(R.id.profilePic).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", friend)
+            startActivity(intent)
+        }
+
 
         vista.findViewById<ImageView>(R.id.action2).visibility = View.GONE
 

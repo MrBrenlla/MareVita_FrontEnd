@@ -1,5 +1,6 @@
 package gal.marevita
 
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
@@ -12,7 +13,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import gal.marevita.databinding.PeticionsBinding
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class PeticionsFragment : Fragment() {
 
@@ -37,8 +41,11 @@ class PeticionsFragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        binding.receivedPetitions.removeAllViews()
-        binding.sendedPetitions.removeAllViews()
+        lifecycleScope.launch {
+            delay(200)
+            binding.receivedPetitions.removeAllViews()
+            binding.sendedPetitions.removeAllViews()        }
+
     }
 
     fun refreshList() {
@@ -85,7 +92,18 @@ class PeticionsFragment : Fragment() {
             }
         }
 
-        if(!buttons){
+        vista.findViewById<TextView>(R.id.userName).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", friend)
+            startActivity(intent)
+        }
+        vista.findViewById<ImageView>(R.id.profilePic).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", friend)
+            startActivity(intent)
+        }
+
+        if (!buttons) {
             vista.findViewById<ImageView>(R.id.action1).visibility = View.GONE
             vista.findViewById<ImageView>(R.id.action2).visibility = View.GONE
         }

@@ -113,14 +113,14 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun endThis(callback: () -> Unit){
-        if (!waitAction) callback()
-        else lifecycleScope.launch {
+        lifecycleScope.launch {
             endLate(callback)
         }
     }
 
     private suspend fun endLate(callback: () -> Unit){
-        delay(1200)
+        if(waitAction)delay(1200)
+        else delay(200)
         callback()
     }
 
