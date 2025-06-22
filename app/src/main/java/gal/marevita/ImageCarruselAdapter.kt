@@ -39,27 +39,25 @@ class ImageCarouselAdapter(
 
         onImageLoaded?.invoke(position)
 
-        // Cargar placeholder animado usando CustomTarget
         Glide.with(holder.imageView.context)
+            .asGif()
             .load(R.drawable.waiting_fish)
-            .into(object : CustomTarget<Drawable>() {
+            .into(object : CustomTarget<GifDrawable>() {
                 override fun onResourceReady(
-                    resource: Drawable,
-                    transition: Transition<in Drawable>?
+                    resource: GifDrawable,
+                    transition: Transition<in GifDrawable>?
                 ) {
-                    // Verificar se a vista aínda é válida
-                    if (holder.bindingAdapterPosition != RecyclerView.NO_POSITION) {
-                        holder.imageView.setImageDrawable(resource)
+                    holder.imageView.setImageDrawable(resource)
+                    resource.start()
 
-                        // Actualizar relación de aspecto se é un GIF
-                        if (resource is GifDrawable) {
-                            val w = resource.intrinsicWidth
-                            val h = resource.intrinsicHeight
-                            if (w > 0 && h > 0) {
-                                aspectRatios[position] = w.toFloat() / h.toFloat()
-                                onImageLoaded?.invoke(position)
-                            }
+                    val position = holder.bindingAdapterPosition
+                    if (position != RecyclerView.NO_POSITION) {
+                        val w = resource.intrinsicWidth
+                        val h = resource.intrinsicHeight
+                        if (w > 0 && h > 0) {
+                            aspectRatios[position] = w.toFloat() / h.toFloat()
                         }
+                        onImageLoaded?.invoke(position)
                     }
                 }
 
@@ -68,30 +66,6 @@ class ImageCarouselAdapter(
                 }
             })
 
-        Glide.with(holder.imageView.context)
-
-            .load(R.drawable.waiting_fish)
-            .into(object : CustomTarget<Drawable>() {
-                override fun onResourceReady(
-                    resource: Drawable,
-                    transition: Transition<in Drawable>?
-                ) {
-                    holder.imageView.setImageDrawable(resource)
-
-                    val currentPosition = holder.bindingAdapterPosition
-                    if (currentPosition != RecyclerView.NO_POSITION) {
-                        val w = resource.intrinsicWidth
-                        val h = resource.intrinsicHeight
-                        if (w > 0 && h > 0) {
-                            aspectRatios[currentPosition] =
-                                w.toFloat() / h.toFloat()
-                            onImageLoaded?.invoke(currentPosition)
-                        }
-                    }
-                }
-
-                override fun onLoadCleared(placeholder: Drawable?) {}
-            })
 
         ImageAPI(context).getImage(endpoint) { success, image, message ->
             if (context is Activity && !context.isFinishing && !context.isDestroyed)
