@@ -21,7 +21,7 @@ public class ConditionsTranslator {
             case "precipitation":
                 return "Precipitacións";
             case "cloud_cover":
-                return "Cobertaura das nubes";
+                return "Cobertura das nubes";
             case "wave_height":
                 return "Altura de onda";
             case "wave_direction":
@@ -59,7 +59,7 @@ public class ConditionsTranslator {
                 return "pressure";
             case "Precipitacións":
                 return "precipitation";
-            case "Cobertaura das nubes":
+            case "Cobertura das nubes":
                 return "cloud_cover";
             case "Altura de onda":
                 return "wave_height";
