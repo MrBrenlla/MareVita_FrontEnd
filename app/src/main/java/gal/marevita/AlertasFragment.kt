@@ -22,8 +22,8 @@ import kotlinx.coroutines.launch
 class AlertasFragment(
 ) : Fragment() {
 
-    private var _binding: AlertasBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: AlertasBinding
+
 
     private var job: Job? = null
 
@@ -34,7 +34,7 @@ class AlertasFragment(
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = AlertasBinding.inflate(inflater, container, false)
+        binding = AlertasBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -130,10 +130,5 @@ class AlertasFragment(
                     }.fromId(a.id!!)
                 }
             }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }
