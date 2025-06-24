@@ -1,7 +1,18 @@
 
 # Guía de Execución da App MareVita
 
-Este documento proporciona as instrucións necesarias para compilar, configurar e executar a aplicación móbil **MareVita**, desenvolvida en Kotlin con Android Studio como parte do Traballo Fin de Máster (TFM).
+Este repositorio forma parte dun Traballo de Fin de Máster (TFM) no Máster Universitario en Enxeñaría Informática da Universidade da Coruña (UDC).
+
+Contén o cliente móbil de MareVita, unha aplicación Android desenvolvida en Kotlin para dar soporte á pesca deportiva en Galicia. A app proporciona unha experiencia unificada ao pescador, combinando tecnoloxía e accesibilidade.
+
+Funcionalidades principais:
+- Rexistro e consulta de capturas con datos ambientais, imaxes e localización.
+- Mapas con predicións meteorolóxicas, mareas e fases lunares.
+- Alertas configurables baseadas en condicións ambientais.
+- Dimensión social: amizades, perfil, e feed de capturas doutros usuarios.
+
+O frontend conecta cos microservizos REST do backend e ofrece unha interface intuitiva, adaptada ao uso real no litoral galego.
+
 
 >BackEnd dispoñible en [MareVita_BackEnd](https://github.com/MrBrenlla/MareVita_BackEnd)
 
