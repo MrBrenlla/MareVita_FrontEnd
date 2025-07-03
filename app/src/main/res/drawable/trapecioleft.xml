@@ -3,7 +3,7 @@
     android:width="3dp"
     android:height="8dp"
     android:viewportWidth="30"
-    android:viewportHeight="85">
+    android:viewportHeight="81">
 
     <!-- Sombra invertida horizontalmente -->
     <path

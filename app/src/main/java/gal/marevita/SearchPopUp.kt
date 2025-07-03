@@ -3,6 +3,7 @@ package gal.marevita
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
@@ -107,6 +108,17 @@ class SearchPopUp(val context: Context) {
         val vista = inflater.inflate(R.layout.lista_usuarios, container, false)
 
         vista.findViewById<TextView>(R.id.userName).text = username
+
+        vista.findViewById<TextView>(R.id.userName).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", username)
+            context.startActivity(intent)
+        }
+        vista.findViewById<ImageView>(R.id.profilePic).setOnClickListener {
+            val intent = Intent(context, PerfilActivity::class.java)
+            intent.putExtra("userName", username)
+            context.startActivity(intent)
+        }
 
         val imageView = vista.findViewById<ImageView>(R.id.profilePic)
         if (images.containsKey(username)) {

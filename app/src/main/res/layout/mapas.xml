@@ -37,6 +37,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         app:menu="@menu/menu_mapa"
-        android:background="@drawable/trapecioleft"/>
+        android:background="@drawable/trapecioleft"
+        android:paddingBottom="10dp"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

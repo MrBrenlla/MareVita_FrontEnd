@@ -75,10 +75,11 @@ class RegisterActivity : AppCompatActivity() {
             override fun onResponse(call: Call, response: Response) {
                 response.use {
                     try {
+
+                        val respostaJson = JSONObject(it.body?.string() ?: "")
+
                         if (!isFinishing && !isDestroyed)
                             runOnUiThread {
-                                val respostaJson = JSONObject(it.body?.string() ?: "")
-
                                 binding.error.text = null
                                 binding.usernameLayout.error = null
                                 binding.emailLayout.error = null
